@@ -48,9 +48,7 @@ def generate_url():
     )
     patterns = parse.quote(patterns)
 
-    url = (
-        f"http://localhost:5000/calendar-filter?url={calendar_url}&patterns={patterns}"
-    )
+    url = f"https://calendarfilter.jlehmkuhl.com/filter-calendar?url={calendar_url}&patterns={patterns}"
     state.result_url = url
 
 

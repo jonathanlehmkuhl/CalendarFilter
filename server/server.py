@@ -28,7 +28,7 @@ def filter_calendar(calendar, patterns):
 app = Flask(__name__)
 
 
-@app.route("/calendar-filter")
+@app.route("/")
 def serve_filtered_calendar():
     calendar_url = request.args.get("url")
     if not calendar_url:
