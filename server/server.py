@@ -39,7 +39,7 @@ def serve_filtered_calendar():
         abort(400, description="Missing 'patterns' parameter")
 
     calendar = download_calendar(calendar_url)
-    patterns_list = [patterns.strip() for pattern in patterns.split(",")]
+    patterns_list = [pattern.strip() for pattern in patterns.split(",")]
     filtered_calender = filter_calendar(calendar, patterns_list)
 
     try:
